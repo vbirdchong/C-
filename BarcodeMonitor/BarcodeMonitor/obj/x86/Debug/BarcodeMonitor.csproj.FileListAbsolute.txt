@@ -1,0 +1,17 @@
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\BarcodeMonitor.exe.config
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\BarcodeMonitor.exe
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\BarcodeMonitor.pdb
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\Mmmer.Queuer.dll
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\Newtonsoft.Json.dll
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\bin\Debug\Newtonsoft.Json.xml
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\MainWindow.baml
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\MainWindow.g.cs
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\App.g.cs
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\BarcodeMonitor_MarkupCompile.cache
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\BarcodeMonitor.g.resources
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\BarcodeMonitor.Properties.Resources.resources
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\BarcodeMonitor.exe
+d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Debug\BarcodeMonitor.pdb

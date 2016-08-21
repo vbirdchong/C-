@@ -1,0 +1,9 @@
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\IdConfirmApp.exe.config
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\IdConfirmApp.exe
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\IdConfirmApp.pdb
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\Mmmer.Queuer.dll
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\Newtonsoft.Json.dll
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Release\Newtonsoft.Json.xml
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Release\ResolveAssemblyReference.cache
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Release\IdConfirmApp.exe
+D:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Release\IdConfirmApp.pdb

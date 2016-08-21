@@ -1,0 +1,8 @@
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Debug\IdConfirmApp.exe.config
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Debug\IdConfirmApp.exe
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Debug\IdConfirmApp.pdb
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Debug\IdConfirmApp.exe
+d:\用户目录\Documents\Visual Studio 2010\Projects\IdConfirmApp\IdConfirmApp\obj\x86\Debug\IdConfirmApp.pdb
+d:\用户目录\documents\visual studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Debug\Newtonsoft.Json.dll
+d:\用户目录\documents\visual studio 2010\Projects\IdConfirmApp\IdConfirmApp\bin\Debug\Newtonsoft.Json.xml
