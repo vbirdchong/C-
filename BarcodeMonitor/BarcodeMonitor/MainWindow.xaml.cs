@@ -76,6 +76,9 @@ namespace BarcodeMonitor
 
         void _listener_OnKeyPressed(LowLevelKeyboardListener.BarcodeInfo barCodeInfo)
         {
+
+            //System.Windows.MessageBox.Show(Convert.ToString(barCodeInfo.strBarcode.Length));
+            
             // 条形码显示
             this.textBox_DisplayKeyboardInput.Text = barCodeInfo.strBarcode;
             StartMonitor(barCodeInfo.strBarcode);
@@ -118,7 +121,6 @@ namespace BarcodeMonitor
                 Utils.cBabyInfo baby = new Utils.cBabyInfo();
                 //数据进行解析
                 Utils.DataParse(retStr, ref baby);
-                //baby.PrintBabyInfo();
                 Utils.CreateInfo(baby);
                 this.textBlock_name.Text = baby.m_BabyName;
                 this.textBlock_time.Text = baby.m_BabyTime;

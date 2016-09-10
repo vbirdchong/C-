@@ -16,79 +16,61 @@
         "Entry"
         {
         "MsmKey" = "8:_0B4A5E2498542450F78D5D30FEBF558D"
-        "OwnerKey" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+        "OwnerKey" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_38E85FB5A7D142BD9AA4F6452DDB2DEF"
+        "MsmKey" = "8:_287EF19E4D084EA1801E65C7682AA0AE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_755178A4AE8F4CDBAA45C7565A732040"
+        "MsmKey" = "8:_390E235CC47F41189713FC3A3CAE73A2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_853AD6D46EB346C68D2B6887F7A1968D"
+        "MsmKey" = "8:_6ACF6B1E2ADC462FB6FA0C82E0DCCD4E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8D9CA7AB8BFE4410A14E7A38A77B3519"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8F47A05D65E94B178B743D435E3884A3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9FFC70263509493FB62C7AD7B4310519"
+        "MsmKey" = "8:_9DEC2265D62943DE89D3768F737184A2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A6F0A163340043E246BB268CA7D4B784"
-        "OwnerKey" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+        "OwnerKey" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+        "MsmKey" = "8:_A8EA5EDBC05C48968CA49E85576BD46F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EF84E115110A4EB080A419491927AF7E"
+        "MsmKey" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F20DF96EC8704C49B32066E0BF2AC3F4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_38E85FB5A7D142BD9AA4F6452DDB2DEF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8D9CA7AB8BFE4410A14E7A38A77B3519"
+        "OwnerKey" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -101,6 +83,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A6F0A163340043E246BB268CA7D4B784"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6ACF6B1E2ADC462FB6FA0C82E0DCCD4E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_287EF19E4D084EA1801E65C7682AA0AE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -158,6 +152,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 和 x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -218,85 +233,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_38E85FB5A7D142BD9AA4F6452DDB2DEF"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_38E85FB5A7D142BD9AA4F6452DDB2DEF"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_755178A4AE8F4CDBAA45C7565A732040"
-            {
-            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\HeaderBg_Diluent_2.png.ico"
-            "TargetName" = "8:HeaderBg_Diluent_2.png.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_853AD6D46EB346C68D2B6887F7A1968D"
-            {
-            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\BarcodeMonitor.pdb"
-            "TargetName" = "8:BarcodeMonitor.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8D9CA7AB8BFE4410A14E7A38A77B3519"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_287EF19E4D084EA1801E65C7682AA0AE"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Mmmer.Queuer, Version=5.1.714.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_8D9CA7AB8BFE4410A14E7A38A77B3519"
+                    "_287EF19E4D084EA1801E65C7682AA0AE"
                     {
                     "Name" = "8:Mmmer.Queuer.dll"
                     "Attributes" = "3:512"
@@ -320,10 +264,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8F47A05D65E94B178B743D435E3884A3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_390E235CC47F41189713FC3A3CAE73A2"
             {
-            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
-            "TargetName" = "8:卸载.exe"
+            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\BarcodeMonitor.exe.config"
+            "TargetName" = "8:BarcodeMonitor.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
             "Condition" = "8:"
@@ -340,10 +284,41 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FFC70263509493FB62C7AD7B4310519"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6ACF6B1E2ADC462FB6FA0C82E0DCCD4E"
             {
-            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\Newtonsoft.Json.xml"
-            "TargetName" = "8:Newtonsoft.Json.xml"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_6ACF6B1E2ADC462FB6FA0C82E0DCCD4E"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DEC2265D62943DE89D3768F737184A2"
+            {
+            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
+            "TargetName" = "8:msiexec.exe"
             "Tag" = "8:"
             "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
             "Condition" = "8:"
@@ -391,14 +366,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8EA5EDBC05C48968CA49E85576BD46F"
+            {
+            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\README.txt"
+            "TargetName" = "8:README.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C45B2DF4E69F4250A7E1D10F4A5E9488"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:BarcodeMonitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+                    "_C45B2DF4E69F4250A7E1D10F4A5E9488"
                     {
                     "Name" = "8:BarcodeMonitor.exe"
                     "Attributes" = "3:512"
@@ -422,10 +417,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF84E115110A4EB080A419491927AF7E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F20DF96EC8704C49B32066E0BF2AC3F4"
             {
-            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\BarcodeMonitor.exe.config"
-            "TargetName" = "8:BarcodeMonitor.exe.config"
+            "SourcePath" = "8:..\\..\\BarcodeMonitor\\BarcodeMonitor\\bin\\Release\\BarcodeIcon.png.ico"
+            "TargetName" = "8:BarcodeIcon.png.ico"
             "Tag" = "8:"
             "Folder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
             "Condition" = "8:"
@@ -521,7 +516,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BarcodeMonitorSetup"
         "ProductCode" = "8:{485E9236-03E8-461B-A785-2287B8186DE5}"
-        "PackageCode" = "8:{068A5BF4-1424-49C5-9527-844FA3DAE0DA}"
+        "PackageCode" = "8:{767901B5-588E-4D22-9A39-60C39C61213B}"
         "UpgradeCode" = "8:{57032F15-8E6D-4927-A4A5-815679418CE3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -641,21 +636,35 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_84D6DC6D97574CCEA4F8527B50F6C5FE"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8739C2EA29C14217BB8D366B384D0B24"
             {
-            "Name" = "8:条码监控 卸载"
+            "Name" = "8:条码监控"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
+            "Folder" = "8:_1905484F03DF49A78FE4632AC51FCDCB"
+            "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
+            "Icon" = "8:_F20DF96EC8704C49B32066E0BF2AC3F4"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D53404C3F22D4E9594E03CA4C0EB4A07"
+            {
+            "Name" = "8:卸载 条码监控"
             "Arguments" = "8:/x {485E9236-03E8-461B-A785-2287B8186DE5}"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8F47A05D65E94B178B743D435E3884A3"
+            "Target" = "8:_9DEC2265D62943DE89D3768F737184A2"
             "Folder" = "8:_1905484F03DF49A78FE4632AC51FCDCB"
             "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8B39AA32B8DA40C0B87529234B5BBA00"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D83607941A3C40C68BEEFE066C9BA610"
             {
             "Name" = "8:条码监控"
             "Arguments" = "8:"
@@ -663,38 +672,24 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
-            "Folder" = "8:_57659FD26F1241588CD0DB034F14FDF5"
-            "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Icon" = "8:_755178A4AE8F4CDBAA45C7565A732040"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CEF9017774F5401EBDDD1075D773F8F4"
-            {
-            "Name" = "8:条码监控"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
-            "Folder" = "8:_1905484F03DF49A78FE4632AC51FCDCB"
-            "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Icon" = "8:_755178A4AE8F4CDBAA45C7565A732040"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E5072DB1B3184B6D8AD2B5DF7017D200"
-            {
-            "Name" = "8:条码监控"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_DAE3DEE15C4044D6BAE59A77F08A8B7C"
+            "Target" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
             "Folder" = "8:_1A697CF4C07B49C88046F702A7E98F53"
             "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
-            "Icon" = "8:_755178A4AE8F4CDBAA45C7565A732040"
+            "Icon" = "8:_F20DF96EC8704C49B32066E0BF2AC3F4"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E6F4DBFD7B3342E9B7857C247C10780C"
+            {
+            "Name" = "8:条码监控"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_C45B2DF4E69F4250A7E1D10F4A5E9488"
+            "Folder" = "8:_57659FD26F1241588CD0DB034F14FDF5"
+            "WorkingFolder" = "8:_4FF6FC356B6F416089D28AAC8BBDEC9F"
+            "Icon" = "8:_F20DF96EC8704C49B32066E0BF2AC3F4"
             "Feature" = "8:"
             }
         }

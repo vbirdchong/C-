@@ -19,6 +19,8 @@ namespace DesktopWPFAppLowLevelKeyboardHook
         private const int WM_KEYDOWN = 0x0100;
         private const int WM_SYSKEYDOWN = 0x0104;
 
+        private const int BAR_CODE_MAX_LEN = 13;
+
         private List<char> _barcode = new List<char>(100);
         private BarcodeInfo _barCodeInfo = new BarcodeInfo();
         private List<int> _keyMap = new List<int>(11);
@@ -119,7 +121,7 @@ namespace DesktopWPFAppLowLevelKeyboardHook
                 }
 
                 _barCodeInfo.time = DateTime.Now;
-                if (BarCodeEvent != null && _barCodeInfo.isValid)
+                if (BarCodeEvent != null && _barCodeInfo.isValid && _barCodeInfo.strBarcode.Length == BAR_CODE_MAX_LEN)
                 {
                     // 触发事件
                     BarCodeEvent(_barCodeInfo);

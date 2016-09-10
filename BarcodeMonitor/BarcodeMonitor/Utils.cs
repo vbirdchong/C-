@@ -63,35 +63,51 @@ namespace BarcodeMonitor
 
             if (MmmerServerIsRunning())
             {
-                ServiceDto dto1 = SaoFactory.QueuerClientSinglethon.GetServiceByCode(serviceCode);
+                ServiceDto dto1;
+                try
+                {
+                    dto1 = SaoFactory.QueuerClientSinglethon.GetServiceByCode(serviceCode);
+                }
+
+                catch (Exception e)
+                {
+                    // 为了保证监测的程序不会因为对端服务的原因而挂掉，这里将捕获到的CommunicationException 异常过滤掉
+                    //throw new Exception("出错啦！", e);
+                    return;
+                }
+
                 QueueDto dtoX = new QueueDto();
-                dtoX.Service = dto1.ID;
-
-                if (baby.m_iErrorCode == ErrorCodeType.BABY_NO_RECORD)
+                if (dtoX != null)
                 {
-                    //dtoX.Phone = "无预约";
-                    dtoX.IDCard = "";
-                    dtoX.Name = "";
-                }
-                else
-                {
-                    dtoX.Name = baby.m_BabyName;
-                    dtoX.IDCard = "";
-                    // 该宝宝已经有预约
-                    // 对于phone这个字段是否可以拿来复用还未定，暂时将其注释掉
+                    dtoX.Service = dto1.ID;
 
-                    //if (baby.m_iErrorCode == ErrorCodeType.BABY_OK)
-                    //{
-                    //    dtoX.Phone = baby.m_BabyTime;
-                    //}
-                    //else
-                    //{
-                    //    dtoX.Phone = "无预约";
-                    //}
-                }
+                    if (baby.m_iErrorCode == ErrorCodeType.BABY_NO_RECORD)
+                    {
+                        //dtoX.Phone = "无预约";
+                        dtoX.IDCard = "";
+                        dtoX.Name = "";
+                    }
+                    else
+                    {
+                        dtoX.Name = baby.m_BabyName;
+                        dtoX.IDCard = "";
+                        // 该宝宝已经有预约
+                        // 对于phone这个字段是否可以拿来复用还未定，暂时将其注释掉
 
-                TicketDto dto2 = SaoFactory.QueuerClientSinglethon.Create(dtoX);
-                //Console.WriteLine(string.Format("Code:{0},ServiceName:{1},Windows:{2},Waiting:{3}", dto2.Code, dto2.ServiceName, dto2.Windows, dto2.Waiting));
+                        //if (baby.m_iErrorCode == ErrorCodeType.BABY_OK)
+                        //{
+                        //    dtoX.Phone = baby.m_BabyTime;
+                        //}
+                        //else
+                        //{
+                        //    dtoX.Phone = "无预约";
+                        //}
+                    }
+
+                    TicketDto dto2 = SaoFactory.QueuerClientSinglethon.Create(dtoX);
+                    //Console.WriteLine(string.Format("Code:{0},ServiceName:{1},Windows:{2},Waiting:{3}", dto2.Code, dto2.ServiceName, dto2.Windows, dto2.Waiting));
+                }
+               
             }
         }
 
