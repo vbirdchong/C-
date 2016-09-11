@@ -15,3 +15,19 @@ d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMoni
 d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\GenerateResource.write.1.tlog
 d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.exe
 d:\用户目录\documents\visual studio 2010\Projects\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.pdb
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\BarcodeMonitor.exe.config
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.exe
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.pdb
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\BarcodeMonitor.exe
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\BarcodeMonitor.pdb
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\Mmmer.Queuer.dll
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\Newtonsoft.Json.dll
+D:\C#\BarcodeMonitor\BarcodeMonitor\bin\Release\Newtonsoft.Json.xml
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.csprojResolveAssemblyReference.cache
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\MainWindow.baml
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\MainWindow.g.cs
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\App.g.cs
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor_MarkupCompile.cache
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.g.resources
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.Properties.Resources.resources
+D:\C#\BarcodeMonitor\BarcodeMonitor\obj\x86\Release\BarcodeMonitor.csproj.GenerateResource.Cache

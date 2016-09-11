@@ -9,7 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace BarcodeMonitor
 {
-    class HttpHelper
+    public class HttpHelper
     {
         /// <summary>  
         /// 创建GET方式的HTTP请求  

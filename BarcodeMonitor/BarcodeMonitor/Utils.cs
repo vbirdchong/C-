@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 
 namespace BarcodeMonitor
 {
-    class Utils
+    public class Utils
     {
         public enum ErrorCodeType
         {
@@ -53,7 +53,7 @@ namespace BarcodeMonitor
         /// 向叫号系统添加人员信息，即进行取号
         /// </summary>
         /// <param name="baby"></param>
-        public static void CreateInfo(cBabyInfo baby)
+        public static TicketDto CreateInfo(cBabyInfo baby)
         {
             string serviceCode = "A";
             if (ConfigHelper.GetConfigServiceCode() != null)
@@ -73,7 +73,7 @@ namespace BarcodeMonitor
                 {
                     // 为了保证监测的程序不会因为对端服务的原因而挂掉，这里将捕获到的CommunicationException 异常过滤掉
                     //throw new Exception("出错啦！", e);
-                    return;
+                    return null;
                 }
 
                 QueueDto dtoX = new QueueDto();
@@ -106,9 +106,11 @@ namespace BarcodeMonitor
 
                     TicketDto dto2 = SaoFactory.QueuerClientSinglethon.Create(dtoX);
                     //Console.WriteLine(string.Format("Code:{0},ServiceName:{1},Windows:{2},Waiting:{3}", dto2.Code, dto2.ServiceName, dto2.Windows, dto2.Waiting));
+                    return dto2;
                 }
-               
             }
+
+            return null;
         }
 
 
@@ -209,5 +211,6 @@ namespace BarcodeMonitor
             }
             return 0;
         }
+
     }
 }
