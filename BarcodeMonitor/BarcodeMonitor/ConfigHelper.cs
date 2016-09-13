@@ -12,6 +12,8 @@ namespace BarcodeMonitor
         private static string m_authorityCode;
         private static string m_testImuno;
         private static string m_serviceCode;
+        private static string m_authorityName;
+        private static string m_logoPath;
 
         /// <summary>
         /// 返回*.exe.config 文件中appSetting配置段中对应的value值
@@ -37,10 +39,12 @@ namespace BarcodeMonitor
             m_authorityCode = GetAppConfig("Authority");
             m_testImuno = GetAppConfig("TestImuno");
             m_serviceCode = GetAppConfig("ServiceCode");
+            m_authorityName = GetAppConfig("AuthorityName");
+            m_logoPath = GetAppConfig("LogoPath");
 
             if (m_configUrl == null || m_authorityCode == null)
             {
-                Console.WriteLine("错误!请检查配置文件中 Https.url/Authority 是否有进行设置");
+                //Console.WriteLine("错误!请检查配置文件中 Https.url/Authority 是否有进行设置");
                 return false;
             }
             return true;
@@ -68,6 +72,16 @@ namespace BarcodeMonitor
         {
             //Console.WriteLine("m_serviceCode:{0}", m_serviceCode);
             return m_serviceCode;
+        }
+
+        public static string GetConfigAuthorityName()
+        {
+            return m_authorityName;
+        }
+
+        public static string GetConfigLogoPath()
+        {
+            return m_logoPath;
         }
     }
 }

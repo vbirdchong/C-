@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Drawing.Imaging;
 using DesktopWPFAppLowLevelKeyboardHook;
 using System.IO;
 using Mmmer.Queuer.Transfering.Dto;
@@ -89,8 +90,8 @@ namespace BarcodeMonitor
         {
             // 条形码显示
             this.textBox_DisplayKeyboardInput.Text = barCodeInfo.strBarcode;
-            // 没有服务器开启，调试使用
-            //StartMonitor(barCodeInfo.strBarcode);
+            // 本地调试需要注释掉
+            StartMonitor(barCodeInfo.strBarcode);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -172,13 +173,19 @@ namespace BarcodeMonitor
             var printNormalFont = new Font("宋体", 12, System.Drawing.FontStyle.Regular);
             // 票面数字号码要大一些
             var serverNumberFont = new Font("宋体", 25, System.Drawing.FontStyle.Bold);
+            // 公司名称字体 
+            var companyFont = new Font("宋体", 15, System.Drawing.FontStyle.Regular);
+            // 卫生院名称字体
+            var hospitalFont = new Font("宋体", 20, System.Drawing.FontStyle.Regular);
 
+#if true
+            string hospital = ConfigHelper.GetConfigAuthorityName();
+            const string company = "微象科技\n";
             const string server = "办理业务:";
             const string window = "办理窗口:";
             const string waitingPerson = "等待人数:";
             const string time = "取号时间:";
             const string name = "姓名:";
-
             // 拼接字符串
             string serverNumber = Convert.ToString(this.babyCreateResult.baseInfo.Code);
             string printServer = server + Convert.ToString(this.babyCreateResult.baseInfo.ServiceName);
@@ -188,23 +195,73 @@ namespace BarcodeMonitor
                                                     this.babyCreateResult.baseInfo.Fcd.Day, this.babyCreateResult.baseInfo.Fcd.Hour,
                                                     this.babyCreateResult.baseInfo.Fcd.Minute, this.babyCreateResult.baseInfo.Fcd.Second);
             string printName = name + this.babyCreateResult.babyInfo.m_BabyName;
+#else
+            string hospital = ConfigHelper.GetConfigAuthorityName();
+            const string company = "牛逼科技\n";
+            string serverNumber = "A987";
+            string printServer = "办理业务:A";
+            string printWindow = "办理窗口:1";
+            string printWaitingPerson = "等待人数:15";
+            string printTime = "取号时间:2016/9/11 12:21:33";
+            string printName = "姓名:王二";
+#endif
 
-            var pointNumberX = 100f;
+            // 公司名字起始位置
+            var pointCompanyX = 90f;
+            // 取到的号码的起始位置
+            var pointNumberX = 90f;
+            // 其他信息字符串的起始位置
             var pointNormalX = 10f;
-            var pointY = 10f;
+            // 起始时的Y轴位置
+            var pointY = 0f;
 
-            // 号码
-            ev.Graphics.DrawString(serverNumber, serverNumberFont, printColor, pointNumberX, pointY);
+            // 如果存在图片，则进行打印
+            if (ConfigHelper.GetConfigLogoPath() != null)
+            {
+                System.Drawing.Image newImage;
+                Boolean needDrawPic = true;
+                try
+                {
+                    System.Drawing.Image.FromFile(ConfigHelper.GetConfigLogoPath());
+                }
+                catch (Exception ex)
+                {
+                    // OutOfMemoryException，FileNotFoundException，ArgumentException
+                    // 截取异常，图片文件可能不存在，那就不需要进行打印 
+                    needDrawPic = false;
+                }
+
+                if (needDrawPic)
+                {
+                    newImage = System.Drawing.Image.FromFile(ConfigHelper.GetConfigLogoPath());
+                    ev.Graphics.DrawImage(newImage, 0, 0);
+                }
+            }
+
+            // 存在医院信息则进行打印
+            if (hospital != null)
+            {
+                SizeF hospitalSize = TextRenderer.MeasureText(hospital, hospitalFont);
+                StringFormat hopitalStrFormat = new StringFormat();
+                // 水平居中
+                hopitalStrFormat.Alignment = StringAlignment.Center;
+                ev.Graphics.DrawString(hospital, hospitalFont, printColor, new RectangleF(0, 0, 290, hospitalSize.Height), hopitalStrFormat);
+            }
+
+            // 取到的号
+            ev.Graphics.DrawString(serverNumber, serverNumberFont, printColor, pointNumberX, pointY += 30f);
             // 业务
             ev.Graphics.DrawString(printServer, printNormalFont, printColor, pointNormalX, pointY += 30f);
             // 窗口
             ev.Graphics.DrawString(printWindow, printNormalFont, printColor, pointNormalX, pointY += 20f);
             // 等待人数
             ev.Graphics.DrawString(printWaitingPerson, printNormalFont, printColor, pointNormalX, pointY += 20f);
-            // 打印时间
+            // 取号时间
             ev.Graphics.DrawString(printTime, printNormalFont, printColor, pointNormalX, pointY += 20f);
-            // 姓名 
+            // 姓名
             ev.Graphics.DrawString(printName, printNormalFont, printColor, pointNormalX, pointY += 20f);
+            // 公司名字
+            ev.Graphics.DrawString(company, companyFont, printColor, pointCompanyX, pointY += 20f); 
         }
 
         /// <summary>
@@ -217,7 +274,7 @@ namespace BarcodeMonitor
             try
             {
                 PrintDocument pd = new PrintDocument();
-                pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
+                pd.PrintPage += new PrintPageEventHandler(this.PrintInfo);
                 pd.Print();
             }
             catch (Exception ex)
@@ -230,40 +287,64 @@ namespace BarcodeMonitor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="ev"></param>
-        private void pd_PrintPage(object sender, PrintPageEventArgs ev)
-        {
-            // 字体颜色
-            var printColor = System.Drawing.Brushes.Black;
-            // 票面通用字体
-            var printNormalFont = new Font("宋体", 12, System.Drawing.FontStyle.Regular);
-            // 票面数字号码要大一些
-            var serverNumberFont = new Font("宋体", 25, System.Drawing.FontStyle.Bold);
+        //private void pd_PrintPage(object sender, PrintPageEventArgs ev)
+        //{
+        //    // 字体颜色
+        //    var printColor = System.Drawing.Brushes.Black;
+        //    // 票面通用字体
+        //    var printNormalFont = new Font("宋体", 12, System.Drawing.FontStyle.Regular);
+        //    // 票面数字号码要大一些
+        //    var serverNumberFont = new Font("宋体", 25, System.Drawing.FontStyle.Bold);
+        //    // 公司名称字体 
+        //    var companyFont = new Font("宋体", 15, System.Drawing.FontStyle.Regular);
+        //    // 卫生院名称字体
+        //    var hospitalFont = new Font("宋体", 20, System.Drawing.FontStyle.Regular);
 
-            // 号码
-            string serverNumber = "A001";
-            string printServer = "办理业务:A";
-            string printWindow = "办理窗口:1";
-            string printWaitingPerson = "等待人数:15";
-            string printTime = "取号时间:2016/9/11 12:21:33";
-            string printName = "姓名:王二";
+        //    string hospital = ConfigHelper.GetConfigAuthorityName();
+        //    const string company = "牛逼科技\n";
+        //    string serverNumber = "A987";
+        //    string printServer = "办理业务:A";
+        //    string printWindow = "办理窗口:1";
+        //    string printWaitingPerson = "等待人数:15";
+        //    string printTime = "取号时间:2016/9/11 12:21:33";
+        //    string printName = "姓名:王二";
 
-            var pointNumberX = 100f;
-            var pointNormalX = 10f;
-            var pointY = 10f;
+        //    var pointCompanyX = 90f;
+        //    var pointNumberX = 90f;
+        //    var pointNormalX = 10f;
+        //    var pointY = 0f;
 
-            // 号码
-            ev.Graphics.DrawString(serverNumber, serverNumberFont, printColor, pointNumberX, pointY);
+        //    // 如果存在图片，则进行打印
+        //    if (ConfigHelper.GetConfigLogoPath() != null)
+        //    {
+        //        System.Drawing.Image newImage = System.Drawing.Image.FromFile(ConfigHelper.GetConfigLogoPath());
+        //        ev.Graphics.DrawImage(newImage, 0, 0);
+        //    }
 
-            // 业务
-            ev.Graphics.DrawString(printServer, printNormalFont, printColor, pointNormalX, pointY += 30f);
-
-            ev.Graphics.DrawString(printWindow, printNormalFont, printColor, pointNormalX, pointY += 20f);
-
-            ev.Graphics.DrawString(printWaitingPerson, printNormalFont, printColor, pointNormalX, pointY += 20f);
-
-            ev.Graphics.DrawString(printTime, printNormalFont, printColor, pointNormalX, pointY += 20f);
-
-            ev.Graphics.DrawString(printName, printNormalFont, printColor, pointNormalX, pointY += 20f);
-        }
+        //    // 存在医院信息则进行打印
+        //    if (hospital != null)
+        //    {
+        //        SizeF hospitalSize = TextRenderer.MeasureText(hospital, hospitalFont);
+        //        StringFormat hopitalStrFormat = new StringFormat();
+        //        // 水平居中
+        //        hopitalStrFormat.Alignment = StringAlignment.Center;
+        //        ev.Graphics.DrawString(hospital, hospitalFont, printColor, new RectangleF(0, 0, 290, hospitalSize.Height), hopitalStrFormat);
+        //    }
+            
+        //    // 取到的号
+        //    ev.Graphics.DrawString(serverNumber, serverNumberFont, printColor, pointNumberX, pointY += 30f);
+        //    // 业务
+        //    ev.Graphics.DrawString(printServer, printNormalFont, printColor, pointNormalX, pointY += 30f);
+        //    // 窗口
+        //    ev.Graphics.DrawString(printWindow, printNormalFont, printColor, pointNormalX, pointY += 20f);
+        //    // 等待人数
+        //    ev.Graphics.DrawString(printWaitingPerson, printNormalFont, printColor, pointNormalX, pointY += 20f);
+        //    // 取号时间
+        //    ev.Graphics.DrawString(printTime, printNormalFont, printColor, pointNormalX, pointY += 20f);
+        //    // 姓名
+        //    ev.Graphics.DrawString(printName, printNormalFont, printColor, pointNormalX, pointY += 20f);
+        //    // 公司名字
+        //    ev.Graphics.DrawString(company, companyFont, printColor, pointCompanyX, pointY += 20f);  
+        //}
     }
 }
