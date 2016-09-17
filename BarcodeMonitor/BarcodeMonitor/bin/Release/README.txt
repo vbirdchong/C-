@@ -12,6 +12,10 @@
     <add key="Https.url" value="https://121.40.180.155:8082/V25/Vaccine/Index.aspx/ConfirmAppointInject" />
     <!--医院机构代码-->
     <add key="Authority" value="3301043301" />
+    <!--医院机构名称-->
+    <add key="AuthorityName" value="皋埠镇卫生院"/>
+    <!--Logo 图片路径-->
+    <add key="LogoPath" value="C:/Users/xxx/Desktop/img/img/48x48.png"/>
     <!--业务代码，需要和排队管理系统中的业务列表保持一致，目前只能处理一种业务的插入-->
     <add key="ServiceCode" value="A" />
   </appSettings>
