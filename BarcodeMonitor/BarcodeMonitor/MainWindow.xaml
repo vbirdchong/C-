@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BarcodeMonitor.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="扫码监控" Height="429" Width="505" Loaded="Window_Loaded" Closing="Window_Closing">
+        Title="扫码监控" Height="270" Width="482" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid Height="189" Width="384">
         <Label Content="条形码" Height="26" HorizontalAlignment="Left" Margin="10,30,0,0" Name="label1" VerticalAlignment="Top" Width="75" />
         <TextBlock Height="26" HorizontalAlignment="Left" Margin="90,30,0,0" Name="textBox_DisplayKeyboardInput"  VerticalAlignment="Top" Width="250" />

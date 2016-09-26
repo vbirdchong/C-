@@ -56,9 +56,29 @@ namespace BarcodeMonitor
         public static TicketDto CreateInfo(cBabyInfo baby)
         {
             string serviceCode = "A";
-            if (ConfigHelper.GetConfigServiceCode() != null)
+
+            // 已经预约
+            if (baby.m_iErrorCode == ErrorCodeType.BABY_OK)
             {
-                serviceCode = ConfigHelper.GetConfigServiceCode();
+                if (ConfigHelper.GetConfigServiceCodeAppointment() != null)
+                {
+                    serviceCode = ConfigHelper.GetConfigServiceCodeAppointment();
+                }
+                else
+                {
+                    serviceCode = "V";
+                }
+            }
+            else // 未预约
+            {
+                if (ConfigHelper.GetConfigServiceCodeNoAppointment() != null)
+                {
+                    serviceCode = ConfigHelper.GetConfigServiceCodeNoAppointment();
+                }
+                else
+                {
+                    serviceCode = "A";
+                }
             }
 
             if (MmmerServerIsRunning())

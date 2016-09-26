@@ -11,7 +11,9 @@ namespace BarcodeMonitor
         private static string m_configUrl;
         private static string m_authorityCode;
         private static string m_testImuno;
-        private static string m_serviceCode;
+        //private static string m_serviceCode;
+        private static string m_serviceCodeNoAppointment;
+        private static string m_serviceCodeAppointment;
         private static string m_authorityName;
         private static string m_logoPath;
 
@@ -38,7 +40,9 @@ namespace BarcodeMonitor
             m_configUrl = GetAppConfig("Https.url");
             m_authorityCode = GetAppConfig("Authority");
             m_testImuno = GetAppConfig("TestImuno");
-            m_serviceCode = GetAppConfig("ServiceCode");
+            //m_serviceCode = GetAppConfig("ServiceCode");
+            m_serviceCodeNoAppointment = GetAppConfig("ServiceCodeNoAppointment");
+            m_serviceCodeAppointment = GetAppConfig("ServiceCodeAppointment");
             m_authorityName = GetAppConfig("AuthorityName");
             m_logoPath = GetAppConfig("LogoPath");
 
@@ -68,10 +72,20 @@ namespace BarcodeMonitor
             return m_testImuno;
         }
 
-        public static string GetConfigServiceCode()
+        //public static string GetConfigServiceCode()
+        //{
+        //    //Console.WriteLine("m_serviceCode:{0}", m_serviceCode);
+        //    return m_serviceCode;
+        //}
+
+        public static string GetConfigServiceCodeNoAppointment()
         {
-            //Console.WriteLine("m_serviceCode:{0}", m_serviceCode);
-            return m_serviceCode;
+            return m_serviceCodeNoAppointment;
+        }
+
+        public static string GetConfigServiceCodeAppointment()
+        {
+            return m_serviceCodeAppointment;
         }
 
         public static string GetConfigAuthorityName()

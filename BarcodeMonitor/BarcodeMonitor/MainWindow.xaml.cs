@@ -18,6 +18,8 @@ using System.Drawing.Imaging;
 using DesktopWPFAppLowLevelKeyboardHook;
 using System.IO;
 using Mmmer.Queuer.Transfering.Dto;
+using dll_vguang_app_csharp;
+using System.Runtime.InteropServices;
 
 
 namespace BarcodeMonitor
@@ -32,9 +34,15 @@ namespace BarcodeMonitor
             public Utils.cBabyInfo babyInfo;
         }
 
+        // 即插即用型全局键盘监听
         private LowLevelKeyboardListener _listener;
         private NotifyIcon notifyIcon;
         private TicketInfo babyCreateResult;
+
+        // VG 扫码器
+        private Vguang vgListern;
+        private Vguang.DecodeCallBack vgDecodeCall;
+
 
         public MainWindow()
         {
@@ -75,6 +83,8 @@ namespace BarcodeMonitor
             System.Windows.Application.Current.Shutdown();
         }
 
+// 使用全局键盘监听实现，对于即插即用型的条形扫描枪可以使用这种方法
+#if false 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             _listener = new LowLevelKeyboardListener();
@@ -84,6 +94,9 @@ namespace BarcodeMonitor
             {
                 System.Windows.MessageBox.Show("错误!请检查配置文件中 Https.url/Authority 是否有进行设置?\n设置完毕后，请重新启动该应用程序！");
             }
+
+            this.Hide();
+            this.ShowInTaskbar = true;
         }
 
         void _listener_OnKeyPressed(LowLevelKeyboardListener.BarcodeInfo barCodeInfo)
@@ -98,6 +111,60 @@ namespace BarcodeMonitor
         {
             _listener.UnHookKeyboard();
         }
+
+#else
+        // VG的扫码器需要另外装驱动
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.vgListern = new Vguang();
+            this.vgListern.OpenVgDevice();
+
+            //设置扫码成功时的回调
+            this.vgDecodeCall = new Vguang.DecodeCallBack(vgDecodeCallBackStr);
+            Vguang.setDecodeCallBack(vgDecodeCall);
+
+            if (ConfigHelper.GetConfigInfo() == false)
+            {
+                System.Windows.MessageBox.Show("错误!请检查配置文件中 Https.url/Authority 是否有进行设置?\n设置完毕后，请重新启动该应用程序！");
+            }
+
+            //不显示界面，最小化运行
+            this.Hide();
+            this.ShowInTaskbar = true;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.vgListern.CloseVgDevice();
+        }
+
+        public void ReceiveVgBarcode(string barcode) 
+        {
+            // 由于非UI线程不能亲自刷新UI的内容，所以需要通知UI线程进行更新
+            // 不然这里会产生调用线程无法访问此对象，因为另一个线程拥有该对象
+            Dispatcher.Invoke(
+                new Action(
+                    delegate
+                    {
+                        // 条形码显示
+                        this.textBox_DisplayKeyboardInput.Text = barcode;
+                        // 本地调试需要注释掉
+                        StartMonitor(barcode);
+                    }
+                )
+             );
+        }
+
+        //扫码成功时的回调函数
+        private int vgDecodeCallBackStr(IntPtr str, int length)
+        {
+            //得到解码结果字符串
+            string result = Marshal.PtrToStringAnsi(str);
+            ReceiveVgBarcode(result);
+
+            return 0;
+        }
+#endif
 
         void StartMonitor(string barcode)
         {
@@ -172,9 +239,9 @@ namespace BarcodeMonitor
             // 票面通用字体
             var printNormalFont = new Font("宋体", 12, System.Drawing.FontStyle.Regular);
             // 票面数字号码要大一些
-            var serverNumberFont = new Font("宋体", 25, System.Drawing.FontStyle.Bold);
+            var serverNumberFont = new Font("宋体", 22, System.Drawing.FontStyle.Bold);
             // 公司名称字体 
-            var companyFont = new Font("宋体", 15, System.Drawing.FontStyle.Regular);
+            var companyFont = new Font("宋体", 12, System.Drawing.FontStyle.Regular);
             // 卫生院名称字体
             var hospitalFont = new Font("宋体", 20, System.Drawing.FontStyle.Regular);
 

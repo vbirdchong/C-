@@ -89,6 +89,7 @@
     <Compile Include="ConfigHelper.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="Vguang.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
