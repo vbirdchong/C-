@@ -14,8 +14,11 @@
     <add key="Authority" value="3301043301" />
     <!--医院机构名称-->
     <add key="AuthorityName" value="皋埠镇卫生院"/>
-    <!--业务代码，需要和排队管理系统中的业务列表保持一致，目前只能处理一种业务的插入-->
-    <add key="ServiceCode" value="A" />
+    <!--业务代码，需要和排队管理系统中的业务列表保持一致-->
+    <!--ServiceCodeNoAppointment 未预约的业务代码-->
+    <add key="ServiceCodeNoAppointment" value="A" />
+    <!--ServiceCodeAppointment 预约的业务代码-->
+    <add key="ServiceCodeAppointment" value="V"/>
   </appSettings>
 </configuration>
 
@@ -37,10 +40,11 @@ c)
 医院机构代码统一由微象公司提供，每个机构拥有独立的机构代码
 
 d)
-<!--业务代码，需要和排队管理系统中的业务列表保持一致，目前只能处理一种业务的插入-->
-<add key="ServiceCode" value="A" />
+<!--业务代码，需要和排队管理系统中的业务列表保持一致-->
 在排队管理系统->业务管理->业务列表 一栏中，找到对应的业务名称和代码。
-如：名称：预防接种，代码：A
-则设置为<add key="ServiceCode" value="A" />
+如：名称：未预约，代码：A
+则设置为<add key="ServiceCodeNoAppointment" value="A" />
+如：名称：已经预约，代码：V
+则设置为<add key="ServiceCodeAppointment" value="V"/>
 
 
